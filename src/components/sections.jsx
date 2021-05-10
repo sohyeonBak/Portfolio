@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger'
-import Contact from './contact';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../style/section.scss';
 import '../style/about.scss'
 import '../style/firstproject.scss'
 import '../style/secondproject.scss';
 import '../style/thirdproject.scss';
 import '../style/fourthproject.scss'
+import '../style/contact.scss';
 import MainImage from '../image/mainImage.jpg'
 import Me from '../image/me.jpg'
 import ProjectImage01 from'../image/Artboard.jpg'
@@ -16,6 +16,7 @@ import ProjectImage03 from '../image/Business.png'
 import projectImage04 from '../image/consult.jpg'
 
 
+gsap.registerPlugin(ScrollTrigger); 
 
 
 const Sections = (props) => {
@@ -25,15 +26,11 @@ const Sections = (props) => {
     const secondProjectRef = useRef(null);
     const thirdProjectRef = useRef(null);
     const fourthProjectRef = useRef(null);
+    const finalRef = useRef(null);
     
-    
-    console.log(targetRef.current)
     useEffect(()=>{
-        gsap.registerPlugin(ScrollTrigger); 
     
-        const newArr = [targetRef.current,aboutRef.current,firstProjectRef.current,secondProjectRef.current,thirdProjectRef.current,fourthProjectRef.current]
-        
-        console.log(newArr)
+        const newArr = [targetRef.current,aboutRef.current,firstProjectRef.current,secondProjectRef.current,thirdProjectRef.current,fourthProjectRef.current,finalRef.current]
 
         gsap.to(newArr, {
             xPercent: -100 * (newArr.length - 1),
@@ -48,11 +45,7 @@ const Sections = (props) => {
             }
           });
         
-        
-
-        
-        
-      },[targetRef,aboutRef,firstProjectRef,secondProjectRef,thirdProjectRef,fourthProjectRef])
+      },[targetRef,aboutRef,firstProjectRef,secondProjectRef,thirdProjectRef,fourthProjectRef,finalRef])
 
     return(
         <div className="container">
@@ -127,7 +120,16 @@ const Sections = (props) => {
             </div>
         </section>
 
-        <Contact />
+        <section ref={finalRef} className="panel gray">
+            <div className="contactzone">
+                <h1>Sohyeon Park</h1>
+                <p>sohyeonbakoly@gmail.com</p>
+                <ul>
+                    <li><a href="https://github.com/sohyeonBak">Github</a></li>
+                    <li><a href="https://velog.io/@sohyeonbak_oly">Velog</a></li>
+                </ul>
+            </div>
+        </section>  
         </div>    
     );}
 
