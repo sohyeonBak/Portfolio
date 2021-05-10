@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import CSSPlugin from 'gsap/CSSPlugin';
 import About from './about';
 import FirstProject from './first-project';
 import SecondProject from './second-project';
@@ -9,6 +10,8 @@ import FourthProject from './fourth-project';
 import Contact from './contact';
 import '../style/section.scss';
 import MainImage from '../image/mainImage.jpg'
+
+const C = CSSPlugin;
 
 const Sections = (props) => {
 
