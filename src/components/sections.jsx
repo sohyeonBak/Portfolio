@@ -11,6 +11,7 @@ import Contact from './contact';
 import '../style/section.scss';
 import MainImage from '../image/mainImage.jpg'
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const C = CSSPlugin;
 
 const Sections = (props) => {
