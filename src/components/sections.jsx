@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import '../style/section.scss';
 import '../style/about.scss'
 import '../style/firstproject.scss'
@@ -16,7 +16,6 @@ import ProjectImage03 from '../image/Business.png'
 import projectImage04 from '../image/consult.jpg'
 
 
-gsap.registerPlugin(ScrollTrigger); 
 
 
 const Sections = (props) => {
@@ -29,7 +28,7 @@ const Sections = (props) => {
     const finalRef = useRef(null);
     
     useEffect(()=>{
-    
+        gsap.registerPlugin(ScrollTrigger);
         const newArr = [targetRef.current,aboutRef.current,firstProjectRef.current,secondProjectRef.current,thirdProjectRef.current,fourthProjectRef.current,finalRef.current]
 
         gsap.to(newArr, {
