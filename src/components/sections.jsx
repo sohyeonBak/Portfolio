@@ -14,7 +14,7 @@ import ProjectImage01 from'../image/Artboard.jpg'
 import ProjectImage02 from '../image/cats.jpg'
 import ProjectImage03 from '../image/Business.png'
 import projectImage04 from '../image/consult.jpg'
-
+// eslint-disable-next-line
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -31,7 +31,7 @@ const Sections = (props) => {
     useEffect(()=>{
 
         const newArr = [targetRef.current,aboutRef.current,firstProjectRef.current,secondProjectRef.current,thirdProjectRef.current,fourthProjectRef.current,finalRef.current]
-
+        console.log(newArr)
         gsap.to(newArr, {
             xPercent: -100 * (newArr.length - 1),
             ease: "none",
