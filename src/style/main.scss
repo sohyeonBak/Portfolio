@@ -1,0 +1,50 @@
+@import "./reset.scss";
+
+.header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  border-bottom: 1px solid #000000;
+  div {
+    box-sizing: border-box;
+    font-family: $defaultFont;
+    width: 33%;
+    flex: 1;
+    line-height: 60px;
+    font-size: 20px;
+    font-weight: 200;
+  }
+  .myName {
+    padding-left: 1rem;
+  }
+  .myTitle {
+    text-align: center;
+  }
+  .myData {
+    text-align: right;
+    padding-right: 1rem;
+  }
+}
+
+.title {
+  position: fixed;
+  z-index: 100;
+  width: 100px;
+  height: 100vh;
+  border-right: 1px solid #000000;
+  margin-top: 60px;
+  h1 {
+    position: absolute;
+    bottom: 170px;
+    right: -55px;
+    line-height: 100px;
+    transform: rotate(-90deg);
+    font-family: $defaultFont;
+    font-size: 52px;
+    font-weight: 400;
+    letter-spacing: 5px;
+  }
+}

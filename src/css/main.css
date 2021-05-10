@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap");
+.header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 60px;
+  border-bottom: 1px solid #000000;
+}
+
+.header div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  width: 33%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  line-height: 60px;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.header .myName {
+  padding-left: 1rem;
+}
+
+.header .myTitle {
+  text-align: center;
+}
+
+.header .myData {
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.title {
+  position: fixed;
+  z-index: 100;
+  width: 100px;
+  height: 100vh;
+  border-right: 1px solid #000000;
+  margin-top: 60px;
+}
+
+.title h1 {
+  position: absolute;
+  bottom: 170px;
+  right: -55px;
+  line-height: 100px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  font-family: "Montserrat", sans-serif;
+  font-size: 52px;
+  font-weight: 400;
+  letter-spacing: 5px;
+}
+/*# sourceMappingURL=main.css.map */

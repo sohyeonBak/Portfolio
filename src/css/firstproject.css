@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap");
+.orange {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #ffffff;
+}
+
+.orange .projectImage01 {
+  width: 100%;
+  height: 70%;
+  background-color: gray;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 60px;
+  margin-left: 100px;
+}
+
+.orange .projectImage01 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.orange .projectsSubs01 {
+  width: 100%;
+  height: 100px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 100px;
+  border-bottom: 1px solid #000000;
+}
+
+.orange .projectsSubs01 p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 100px;
+  display: inline-block;
+  width: 60%;
+  padding-left: 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.orange .projectsSubs01 a {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 1000;
+}
+
+.orange .projectsSubs01 .page {
+  position: relative;
+  padding-left: 1.8rem;
+}
+
+.orange .projectsSubs01 .page::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+}
+
+.orange .projectsSubs01 .blog {
+  position: relative;
+  margin-left: 5rem;
+  padding-left: 1.5rem;
+}
+
+.orange .projectsSubs01 .blog::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=firstproject.css.map */

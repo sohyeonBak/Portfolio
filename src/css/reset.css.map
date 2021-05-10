@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,OAAO,CAAC,4GAAI",
+    "sources": [
+        "../style/reset.scss"
+    ],
+    "names": [],
+    "file": "reset.css"
+}
