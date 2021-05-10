@@ -1,12 +1,13 @@
-import React from 'react';
+import React,{useRef} from 'react';
 
 import '../style/about.scss'
 import Me from '../image/me.jpg'
 
-const About = (props) => {
+const About = ({onTargetRef}) => {
+    const targetRef = useRef(onTargetRef);
     
     return(
-        <section className="panel red">
+        <section ref={targetRef} className="panel red">
             <div className="selfImage">
                 <img className="me" src={Me} alt="profile-image" />
             </div>

@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import '../style/thirdproject.scss';
-
 import ProjectImage03 from '../image/Business.png'
 
 const ThirdProject = (props) => {
+    const targetRef = useRef(null)
     return(
-        <section className="panel green">
+        <section ref={targetRef} className="panel green">
             <div className="projectImage03">
                 <img src={ProjectImage03} alt="project3-thumbnail-image" />
             </div>
