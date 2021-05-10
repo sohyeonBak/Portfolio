@@ -36,7 +36,7 @@ const Sections = (props) => {
         <div className="container">
             <div className="description panel blue">
                 <div className="imageSection">
-                    <img src={MainImage} alt />
+                    <img src={MainImage} alt="main-image" />
                 </div>
                 <div className="titleSection">
                     <h1>FRONT-END <br /> DEVELOPMENT</h1>

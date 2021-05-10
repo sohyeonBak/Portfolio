@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import '../style/firstproject.scss'
 import ProjectImage01 from'../image/Artboard.jpg'
 
@@ -7,7 +7,7 @@ const FirstProject = (props) => {
     return(
         <section className="panel orange">
             <div className="projectImage01">
-                <img src={ProjectImage01} alt="" />
+                <img src={ProjectImage01} alt="project1-thumbnail-image" />
             </div>
             <div className="projectsSubs01">
                 <p>Moview</p>

@@ -5,7 +5,7 @@ const SecondProject = (props) => {
     return(
         <section className="panel purple">
             <div className="projectImage02">
-                <img src={ProjectImage02} alt="" />
+                <img src={ProjectImage02} alt="project2-thumbnail-image" />
             </div>
             <div className="projectsSubs02">
             <p>Adorable Cats</p>

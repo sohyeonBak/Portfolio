@@ -6,7 +6,7 @@ const FourthProject = (props) => {
     return(
         <section className="panel black">
             <div className="projectImage04">
-                <img src={projectImage04} alt="" />
+                <img src={projectImage04} alt="project4-thumbnail-image" />
             </div>
             <div className="projectsSubs04">
                 <p>Request for consulting</p>
