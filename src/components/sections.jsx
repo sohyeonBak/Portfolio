@@ -15,6 +15,7 @@ import ProjectImage02 from '../image/cats.jpg'
 import ProjectImage03 from '../image/Business.png'
 import projectImage04 from '../image/consult.jpg'
 
+gsap.registerPlugin(ScrollTrigger);
 
 
 
@@ -28,7 +29,7 @@ const Sections = (props) => {
     const finalRef = useRef(null);
     
     useEffect(()=>{
-        gsap.registerPlugin(ScrollTrigger);
+
         const newArr = [targetRef.current,aboutRef.current,firstProjectRef.current,secondProjectRef.current,thirdProjectRef.current,fourthProjectRef.current,finalRef.current]
 
         gsap.to(newArr, {
