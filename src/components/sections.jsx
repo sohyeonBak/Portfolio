@@ -12,11 +12,6 @@ import ProjectImage03 from '../image/Business.png'
 import projectImage04 from '../image/consult.jpg'
 
 
-// Force CSSPlugin to not get dropped during build
-// eslint-disable-next-line
-
-
-
 const Sections = () => {
     const targetRef = useRef(null);
     const aboutRef = useRef(null);
@@ -30,32 +25,45 @@ const Sections = () => {
 
         gsap.registerPlugin(CSSPlugin);
         gsap.registerPlugin(ScrollTrigger);
+
+        let sections = gsap.utils.toArray(".panel");
+
+        gsap.to(sections, {
+        xPercent: -100 * (sections.length - 1),
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".container",
+            pin: true,
+            scrub: 1,
+            snap: 1 / (sections.length - 1),
+            end: () => "+=" + document.querySelector(".container").offsetWidth
+        }
+        });
+
+        // const newArr = [
+        //     targetRef.current, 
+        //     aboutRef.current,
+        //     firstProjectRef.current,
+        //     secondProjectRef.current,
+        //     thirdProjectRef.current,
+        //     fourthProjectRef.current,
+        //     finalRef.current
+        // ]
         
-        const newArr = [
-            targetRef.current, 
-            aboutRef.current,
-            firstProjectRef.current,
-            secondProjectRef.current,
-            thirdProjectRef.current,
-            fourthProjectRef.current,
-            finalRef.current
-        ]
+        // gsap.to(newArr, {
+        //     xPercent: -100 * (newArr.length - 1),
+        //     ease: "none",
+        //     scrollTrigger: {
+        //         trigger: ".container",
+        //         pin: true,
+        //         scrub: 1,
+        //         snap: 1 / (newArr.length - 1),
+        //         end: () => "+=" + document.querySelector(".container").offsetWidth
+        //     }
+        // })
+        //targetRef,aboutRef,firstProjectRef,secondProjectRef,thirdProjectRef,fourthProjectRef,finalRef
+    },[])
 
-
-        gsap.to(newArr, {
-            xPercent: -100 * (newArr.length - 1),
-            ease: "none",
-            scrollTrigger: {
-              trigger: ".container",
-              pin: true,
-              scrub: 1,
-              snap: 1 / (newArr.length - 1),
-              // base vertical scrolling on how wide the container is so it feels more natural.
-              end: () => "+=" + document.querySelector(".container").offsetWidth
-            }
-          })
-
-      },[targetRef,aboutRef,firstProjectRef,secondProjectRef,thirdProjectRef,fourthProjectRef,finalRef])
 
     return(
         <div className="container">

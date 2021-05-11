@@ -6,9 +6,7 @@
   display: flex;
   flex-wrap: nowrap;
 }
-.panel {
-  scroll-snap-align: start;
-}
+
 .blue {
   flex: 1;
   position: relative;
@@ -20,7 +18,6 @@
     box-sizing: border-box;
     margin-top: 60px;
     margin-left: 200px;
-
     img {
       width: 100%;
       height: 100%;
