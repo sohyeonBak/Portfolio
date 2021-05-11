@@ -1,12 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from "gsap";
+import { CSSPlugin } from 'gsap/CSSPlugin'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import '../style/section.scss';
-import '../style/about.scss'
-import '../style/firstproject.scss'
-import '../style/secondproject.scss';
-import '../style/thirdproject.scss';
-import '../style/fourthproject.scss'
 import '../style/contact.scss';
 import MainImage from '../image/mainImage.jpg'
 import Me from '../image/me.jpg'
@@ -14,12 +10,16 @@ import ProjectImage01 from'../image/Artboard.jpg'
 import ProjectImage02 from '../image/cats.jpg'
 import ProjectImage03 from '../image/Business.png'
 import projectImage04 from '../image/consult.jpg'
+
+
+// Force CSSPlugin to not get dropped during build
+gsap.registerPlugin(CSSPlugin)
 // eslint-disable-next-line
 gsap.registerPlugin(ScrollTrigger);
 
 
 
-const Sections = (props) => {
+const Sections = () => {
     const targetRef = useRef(null);
     const aboutRef = useRef(null);
     const firstProjectRef = useRef(null);
@@ -30,8 +30,17 @@ const Sections = (props) => {
     
     useEffect(()=>{
 
-        const newArr = [targetRef.current,aboutRef.current,firstProjectRef.current,secondProjectRef.current,thirdProjectRef.current,fourthProjectRef.current,finalRef.current]
-        console.log(newArr)
+        const newArr = [
+            targetRef.current, 
+            aboutRef.current,
+            firstProjectRef.current,
+            secondProjectRef.current,
+            thirdProjectRef.current,
+            fourthProjectRef.current,
+            finalRef.current
+        ]
+
+
         gsap.to(newArr, {
             xPercent: -100 * (newArr.length - 1),
             ease: "none",
@@ -43,15 +52,15 @@ const Sections = (props) => {
               // base vertical scrolling on how wide the container is so it feels more natural.
               end: () => "+=" + document.querySelector(".container").offsetWidth
             }
-          });
-        
+          })
+
       },[targetRef,aboutRef,firstProjectRef,secondProjectRef,thirdProjectRef,fourthProjectRef,finalRef])
 
     return(
         <div className="container">
             <div ref={targetRef} className="description panel blue">
                 <div className="imageSection">
-                    <img src={MainImage} alt="main-image" />
+                    <img src={MainImage} alt="main" />
                 </div>
                 <div className="titleSection">
                     <h1>FRONT-END <br /> DEVELOPMENT</h1>
@@ -59,7 +68,7 @@ const Sections = (props) => {
             </div>
             <section ref={aboutRef} className="panel red">
             <div className="selfImage">
-                <img className="me" src={Me} alt="profile-image" />
+                <img className="me" src={Me} alt="profile" />
             </div>
             <div className="stackList">
                 <ul>
@@ -77,7 +86,7 @@ const Sections = (props) => {
 
         <section ref={firstProjectRef} className="panel orange">
             <div className="projectImage01">
-                <img src={ProjectImage01} alt="project1-thumbnail-image" />
+                <img src={ProjectImage01} alt="project1-thumbnail" />
             </div>
             <div className="projectsSubs01">
                 <p>Moview</p>
@@ -88,7 +97,7 @@ const Sections = (props) => {
 
         <section ref={secondProjectRef} className="panel purple">
             <div className="projectImage02">
-                <img src={ProjectImage02} alt="project2-thumbnail-image" />
+                <img src={ProjectImage02} alt="project2-thumbnail" />
             </div>
             <div className="projectsSubs02">
             <p>Adorable Cats</p>
@@ -100,7 +109,7 @@ const Sections = (props) => {
 
         <section ref={thirdProjectRef} className="panel green">
             <div className="projectImage03">
-                <img src={ProjectImage03} alt="project3-thumbnail-image" />
+                <img src={ProjectImage03} alt="project3-thumbnail" />
             </div>
             <div className="projectsSubs03">
             <p>Business Card Maker</p>
@@ -111,7 +120,7 @@ const Sections = (props) => {
 
         <section ref={fourthProjectRef} className="panel black">
             <div className="projectImage04">
-                <img src={projectImage04} alt="project4-thumbnail-image" />
+                <img src={projectImage04} alt="project4-thumbnail" />
             </div>
             <div className="projectsSubs04">
                 <p>Request for consulting</p>
