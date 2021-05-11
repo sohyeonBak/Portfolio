@@ -13,9 +13,7 @@ import projectImage04 from '../image/consult.jpg'
 
 
 // Force CSSPlugin to not get dropped during build
-gsap.registerPlugin(CSSPlugin)
 // eslint-disable-next-line
-gsap.registerPlugin(ScrollTrigger);
 
 
 
@@ -30,6 +28,9 @@ const Sections = () => {
     
     useEffect(()=>{
 
+        gsap.registerPlugin(CSSPlugin);
+        gsap.registerPlugin(ScrollTrigger);
+        
         const newArr = [
             targetRef.current, 
             aboutRef.current,
